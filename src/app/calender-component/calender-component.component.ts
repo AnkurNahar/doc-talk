@@ -25,5 +25,9 @@ export class CalenderComponentComponent implements OnInit {
     this.datePicker.open();
 }
   
+/* myFilter = (d: Date): boolean => {
+    const day = d.getDay();
+    return day !== 0 && day !== 6;
+  } */
 
 }
