@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
+import { docInfo } from '../shared/doc_info';
 
 @Component({
   selector: 'app-doc-info-component',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./doc-info-component.component.css']
 })
 export class DocInfoComponentComponent implements OnInit {
+
+  @Input()
+  doc: docInfo;
 
   constructor() { }
 

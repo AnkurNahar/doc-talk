@@ -25,9 +25,11 @@ export class CalenderComponentComponent implements OnInit {
     this.datePicker.open();
 }
   
-/* myFilter = (d: Date): boolean => {
-    const day = d.getDay();
+//disabling no-appointment days
+//0 - sunday, 6 - saturday
+ myFilter = (d: any): boolean => {
+    const day = d.day();
     return day !== 0 && day !== 6;
-  } */
+  } 
 
 }
