@@ -1,16 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './app-routing/app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { DoctorsComponentComponent } from './doctors-component/doctors-component.component';
 import { DoctorComponentComponent } from './doctor-component/doctor-component.component';
-import { DocInfoComponentComponent } from './doc-info-component/doc-info-component.component';
-import { CalenderComponentComponent } from './calender-component/calender-component.component';
-import { TimeSlotComponentComponent } from './time-slot-component/time-slot-component.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
+
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -22,21 +22,19 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 
-
-
+import { DocService } from './services/doc.service';
 
 
 import 'hammerjs';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     DoctorsComponentComponent,
-    DocInfoComponentComponent,
-    CalenderComponentComponent,
-    TimeSlotComponentComponent,
-    DoctorComponentComponent
+    DoctorComponentComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +51,9 @@ import 'hammerjs';
     MatInputModule,
     MatMomentDateModule
   ],
-  providers: [],
+  providers: [
+    DocService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

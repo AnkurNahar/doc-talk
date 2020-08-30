@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { docInfo } from '../shared/doc_info';
-import { DOCS } from '../shared/docs';
-
+import { docInfo } from '../shared/doc_info'; 
+import { DocService } from '../services/doc.service';
 
 
 
@@ -14,14 +13,15 @@ import { DOCS } from '../shared/docs';
 
 
 export class DoctorsComponentComponent implements OnInit {
-  //should go to service
-  docs: docInfo[] = DOCS;
+  
+  docs: docInfo[];
 
   selectedDoc: docInfo;
 
-  constructor() { }
+  constructor(private docService: DocService) { }
 
   ngOnInit(): void {
+    this.docs = this.docService.getDocs();
   }
 
 //on selecting doctor

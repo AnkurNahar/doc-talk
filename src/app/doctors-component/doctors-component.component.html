@@ -10,7 +10,7 @@
      fxLayoutGap="10px">
 
   <mat-selection-list [multiple]="false" fxFlex>
-    <mat-list-option *ngFor="let doc of docs; last as last" (click) = "onSelect(dish)">
+    <mat-list-option *ngFor="let doc of docs; last as last" [routerLink]="['/doc', doc.name]">
       {{doc.name}}
       <mat-divider [inset]="true" *ngIf="!last"></mat-divider>
     </mat-list-option>

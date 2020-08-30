@@ -1,2 +1,11 @@
-<app-doc-info-component></app-doc-info-component>
-<app-calender-component></app-calender-component>
+<div>
+    <h2> doc</h2>
+    <h3>org</h3>
+</div>
+
+<mat-form-field appearance="fill">
+    <mat-label>Appointment Date</mat-label>
+    <input matInput [matDatepickerFilter]="myFilter" [matDatepicker]="picker"  disabled>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker  #picker disabled="false"></mat-datepicker>
+</mat-form-field>
