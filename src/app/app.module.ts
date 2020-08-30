@@ -21,6 +21,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
+import {MatCardModule} from '@angular/material/card';
 
 import { DocService } from './services/doc.service';
 
@@ -49,7 +50,8 @@ import 'hammerjs';
     MatDatepickerModule,
     MatFormFieldModule,
     MatInputModule,
-    MatMomentDateModule
+    MatMomentDateModule,
+    MatCardModule
   ],
   providers: [
     DocService

@@ -2,3 +2,14 @@
     margin: 20px;
     display:flex;
 }
+
+h3{
+    text-align: center;
+    font-weight: 500;
+    font-size: 170%;
+    font-family: Arial;
+}
+
+.card{
+    margin-left: 8px;
+}

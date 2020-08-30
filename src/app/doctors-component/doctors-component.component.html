@@ -1,7 +1,7 @@
 
 
 <div class="container" fxLayout="column">
- <h3>Our Doctors</h3>
+ <h3>Our Available Doctors</h3>
 </div>
 
 
@@ -11,8 +11,13 @@
 
   <mat-selection-list [multiple]="false" fxFlex>
     <mat-list-option *ngFor="let doc of docs; last as last" [routerLink]="['/doc', doc.name]">
-      {{doc.name}}
+
+      <mat-card>
+        <mat-card-title class="card">{{doc.name}}</mat-card-title>
+        <mat-card-subtitle class="card">{{doc.org}}</mat-card-subtitle>
+      </mat-card>
       <mat-divider [inset]="true" *ngIf="!last"></mat-divider>
+      
     </mat-list-option>
   </mat-selection-list>
 

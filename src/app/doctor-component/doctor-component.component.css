@@ -1,0 +1,19 @@
+.container {
+    margin: 20px;
+    display:flex;
+}
+
+h2{
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
+
+
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}

@@ -1,0 +1,7 @@
+.mat-toolbar {
+    position: relative;
+  }
+
+.toolbar-spacer {
+  flex: 1 1 auto;
+}  
